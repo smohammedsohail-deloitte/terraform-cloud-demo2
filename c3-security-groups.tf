@@ -7,7 +7,7 @@ resource "aws_security_group" "vpc-ssh" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["103.125.163.154/32"]
   }
   egress {
     description = "Allow all ip and ports outboun"
@@ -27,7 +27,7 @@ resource "aws_security_group" "vpc-web" {
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["103.125.163.154/32"]
   }
 
   ingress {
@@ -35,7 +35,7 @@ resource "aws_security_group" "vpc-web" {
     from_port   = 443
     to_port     = 443
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["103.125.163.154/32"]
   }
 
   egress {
